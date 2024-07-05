@@ -1,31 +1,23 @@
-/*
-  1. Use a more-intuitive box-sizing model.
-*/
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+:root {
+  font-family: "Inter", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --primary: #1f1e31;
+  --secondary: #0F3460;
+  --terceary: #533483;
+  --red: #E94560;
+  --soft-white: ##f3f6f8;
+  --white: #fefefe;
+  --black: #111;
+  --gray: #222222;
+
 }
 
-/*
-    2. Remove default margin
-  */
 * {
   margin: 0;
   padding: 0;
-}
-
-/*
-    Typographic tweaks!
-    3. Add accessible line-height
-    4. Improve text rendering
-  */
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  font-family: "Playfair Display", serif;
-}
-
-orth {
-  color: aqua;
+  box-sizing: border-box;
 }
