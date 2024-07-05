@@ -82,10 +82,6 @@ hr {
     align-items: center;
     justify-content: center;
     text-align: center;
-    /*
-    background-color: #f6de26;
-    ${styles[isDay]}
-    */
 }
 
 .cardContainer .card {
@@ -123,4 +119,40 @@ hr {
     justify-content: center;
     align-items: center;
     margin: 20px;
+}
+
+@media(max-width: 1000px) {
+    .bottom {
+        position: relative;
+        bottom: 0;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        height: 80vh;
+    }
+
+    .bottom form {
+        width: 100%;
+    }
+
+    .bottom .fieldset {
+        padding: 0px;
+        gap: 0px;
+        flex-direction: column;
+        margin-top: 20px;
+
+    }
+
+    .bottom .fieldset button {
+        width: 100%;
+    }
+
+    .bottom .fieldset input {
+        width: 100%;
+        background: transparent;
+    }
+
+    .cardContainer h2 {
+        font-size: 50px;
+    }
 }

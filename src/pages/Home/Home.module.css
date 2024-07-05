@@ -37,7 +37,49 @@
 .headers .aside p,
 .headers .aside a {
     color: var(--color-primary);
-    text-decoration: none;
     line-height: 1.5rem;
     font-weight: 300;
+}
+
+@media(max-width: 1000px) {
+    .home {
+        width: 100%;
+        min-height: 500px;
+    }
+
+    .home .headers {
+        flex-direction: column;
+        width: 100%;
+        padding: 50px;
+    }
+
+    .headers .headline {
+        width: 100%;
+        padding-bottom: 0px;
+        text-align: center;
+    }
+
+    .headers h1 {
+        font-size: 40px;
+        font-weight: 700;
+        color: var(--color-primary);
+    }
+
+    .headers .aside {
+        padding: 0;
+        width: 100%;
+        border-bottom: solid 1px var(--color-gray);
+    }
+
+    .headers .aside {
+        padding: 0;
+        padding-bottom: 20px;
+        width: 100%;
+    }
+
+    .headers .aside p,
+    .headers .aside a {
+        text-align: center;
+    }
+
 }
