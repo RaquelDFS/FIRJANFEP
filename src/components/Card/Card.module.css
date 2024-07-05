@@ -1,0 +1,126 @@
+hr {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    border-top: 1px solid var(--color-gray);
+    border-bottom: none;
+}
+
+.bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.isDayLight {
+    background-color: #f6de26;
+}
+
+.isDayLight h2,
+.isDayLight p {
+    color: #372b2b !important;
+
+}
+
+.isNightLight {
+    background-color: #001d3d;
+}
+
+.isNightLight h2,
+.isNightLight p {
+    color: var(--color-white) !important;
+}
+
+
+.bottom .form {
+    width: 70%;
+    display: flex;
+    height: 300px;
+
+}
+
+.bottom .fieldset {
+    height: 100px;
+    border: none !important;
+    background-color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    gap: 20px;
+
+}
+
+.bottom .fieldset .icon {
+    font-size: var(--font-size-g);
+}
+
+.bottom .fieldset input {
+    font-size: var(--font-size-g);
+    border: none;
+    padding: 20px;
+    outline: none;
+}
+
+.bottom .fieldset button {
+    font-size: var(--font-size-g);
+    border: none;
+    padding: 10px 20px;
+    outline: none;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    cursor: pointer;
+}
+
+
+.cardContainer {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /*
+    background-color: #f6de26;
+    ${styles[isDay]}
+    */
+}
+
+.cardContainer .card {
+    color: #372b2b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.cardContainer h2 {
+    font-size: 48px;
+}
+
+.cardContainer .cardTemp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.cardContainer p {
+    font-style: italic;
+    text-transform: capitalize;
+
+}
+
+.cardContainer .card .cardIcon {
+    background-color: var(--color-white);
+    border-radius: 500px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
