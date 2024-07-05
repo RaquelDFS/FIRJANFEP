@@ -1,11 +1,13 @@
+import styles from "./Home.module.css";
+
 export default function Home() {
   return (
-    <>
-      <div>
-        <div>
+    <div className={styles.home}>
+      <div className={styles.headers}>
+        <div className={styles.headline}>
           <h1>O melhor site de consulta climática do mundo</h1>
         </div>
-        <div>
+        <aside className={styles.aside}>
           <p>
             O site mais preciso sobre o tempo do mundo. Utilizamos a melhor API
             do mundo,{" "}
@@ -15,17 +17,17 @@ export default function Home() {
             procidencia as melhores informações pelo menos desde o dia
             04/07/2024, pois foi quando eu conheci. Confira por você mesmo!
           </p>
-        </div>
+        </aside>
       </div>
-      <div>
+      <div className={styles.bottom}>
         <form action="">
-          <fieldset>
+          <fieldset className={styles.fieldset}>
             <p>icone</p>
             <input type="text" placeholder="Pesquise por cidade" />
             <button>Procurar</button>
           </fieldset>
         </form>
       </div>
-    </>
+    </div>
   );
 }

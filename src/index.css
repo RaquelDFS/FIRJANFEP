@@ -1,17 +1,22 @@
 :root {
-  font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --primary: #1f1e31;
-  --secondary: #c4e2ff;
-  --soft-white: #f3f6f8;
-  --white: #fefefe;
-  --black: #111;
-  --gray: #51505e;
+  --color-primary: #1f1e31;
+  --color-secondary: #c4e2ff;
+  --color-soft-white: #f3f6f8;
+  --color-white: #fefefe;
+  --color-black: #111;
+  --color-gray: #e9e9ed;
 
+  --font-size-gg: 5rem;
+  --font-size-g: 1.25rem;
+  --font-size-m: 1.125rem;
+  --font-size-p: 0.875rem;
+  --font-size-pp: 0.65rem
 }
 
 * {
