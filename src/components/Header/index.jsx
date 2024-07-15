@@ -1,65 +1,39 @@
-import { useEffect, useState } from "react";
-
-import { BiMenuAltRight } from "react-icons/bi";
-import { AiOutlineClose } from "react-icons/ai";
-
-import styles from "./Header.module.css";
 import { Link } from "react-router-dom";
 
 const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  const toggleOpen = () => {
-    setMenuOpen((prevState) => !prevState);
-  };
-
-  const [width768, setWidth768] = useState();
-
-  const handleResize = () => {
-    if (window.innerWidth > 768) {
-      setWidth768(true);
-    } else {
-      setWidth768(false);
-    }
-  };
-
-  useEffect(() => {
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
   return (
-    <header className={styles.header}>
-      <div className={styles.content}>
-        <Link to="/" className={styles.logo}>
+    <nav className="navbar navbar-expand-lg bg-body-tertiary p-3">
+      <div className="container-fluid">
+        <a className="navbar-brand" href="#">
           MuitoClima
-        </Link>
-        <nav className={styles.nav}>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/sobre">Sobre</Link>
-            </li>
-            <li>
-              <Link to="/contato">Contato</Link>
-            </li>
-          </ul>
-        </nav>
-        {width768 ? null : (
-          <div>
-            <button onClick={toggleOpen}>
-              {!menuOpen ? <BiMenuAltRight /> : <AiOutlineClose />}
-            </button>
+        </a>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div className="navbar-nav">
+            <Link className="nav-link" to="/">
+              Home
+            </Link>
+            <Link className="nav-link" to="/sobre">
+              Sobre
+            </Link>
+            <Link className="nav-link" to="/contato">
+              Contato
+            </Link>
           </div>
-        )}
+        </div>
       </div>
-    </header>
+    </nav>
   );
 };
 
 export default Header;
-

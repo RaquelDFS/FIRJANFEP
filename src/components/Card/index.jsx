@@ -38,9 +38,6 @@ export default function Card() {
 
   return (
     <>
-      <div>
-        <hr />
-      </div>
       <div
         className={`${styles.bottom} ${
           styles[isDay === 1 ? "isDayLight" : "isNightLight"]
